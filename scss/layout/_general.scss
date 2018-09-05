@@ -1,0 +1,76 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	transition: all .3s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+html {
+	height: 100%;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+body {
+	padding: 20px;
+}
+
+.load {
+	padding: 5px 10px;
+	background: #bacbee;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.phones-list {
+	overflow: hidden;
+	margin-top: 30px;
+
+	li {
+		min-width: 400px;
+		padding: 10px 20px;
+		margin: 0 10px 25px;
+		border: 1px solid #bbb;
+
+		img {
+			width: 30%;
+			float: left;
+		}
+
+		div {
+			float: left;
+			width: 70%;
+			padding-left: 20px;
+		}
+
+		h2 {
+			font-size: 20px;
+			font-weight: 700;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.preload {
+	@include pos(fixed, 0, 0, 0, 0, 99);
+	background: rgba(255, 255, 255, .8) url('../img/preloader.gif') no-repeat center center;
+}
