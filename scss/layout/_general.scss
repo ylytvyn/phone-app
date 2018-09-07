@@ -67,10 +67,44 @@ body {
 			font-weight: 700;
 			margin-bottom: 15px;
 		}
+
+		p {
+			margin-bottom: 10px;
+		}
 	}
 }
 
 .preload {
 	@include pos(fixed, 0, 0, 0, 0, 99);
 	background: rgba(255, 255, 255, .8) url('../img/preloader.gif') no-repeat center center;
+}
+
+.delete {
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.create {
+	@extend .load;
+	background: #f0abcd;
+}
+
+.create-phone {
+	width: 500px;
+	margin-top: 20px;
+
+	.row{
+		margin-bottom: 10px;
+	}
+
+	.field {
+		border: 1px solid #bbb;
+		padding: 5px 10px;
+		flex-basis: 50%;
+	}
+
+	label {
+		font-size: 18px;
+	}
 }
